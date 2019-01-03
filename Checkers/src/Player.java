@@ -79,29 +79,29 @@ public class Player
 						}
 						else
 						{
-							System.out.println("tried to jump too far nigga");
+							System.out.println("You cannot jump this far");
 							return false;
-							// They tried to jump too far (over a gap or some shit)
+							// They tried to jump too far (i.e over a gap)
 						}
 					}
 				}
 				else
 				{
-					System.out.println("nigga u cant jump on another piece LMAO CUNT");
+					System.out.println("You can't jump on another piece");
 					return false;
 					// CONDITION they are trying to jump on top of another piece
 				}
 			}
 			else
 			{
-				System.out.println("NIGGA U CANT MIVE THIS DIR");
+				System.out.println("You can't move in this direction");
 				return false;
 				// CONDITION the piece is not a king and they can't move in this dir
 			}
 		}
 		else
 		{
-			System.out.println("NO PIECE AT FIRST SELECTION");
+			System.out.println("No piece at first selection");
 			return false;
 		}
 		
@@ -163,8 +163,8 @@ public class Player
 					}
 					else
 					{
-						System.out.println("ONE OF THE DOUBLE JUMP LOCS IS MISSING A PIECE BETWEEN");
-						// CONDITION invalid double jump, end ur life
+						System.out.println("Invalid Double Jump (there needs to be a piece between every selected piece)");
+						// CONDITION invalid double jump
 						clearSelectedTiles();
 						board.repaint();
 					}
@@ -172,7 +172,7 @@ public class Player
 			}
 			else
 			{
-				System.out.println("NIGGA U N33D A STARTING POINT");
+				System.out.println("No piece selected at starting point");
 				// CONDITION no piece selected at starting point
 				clearSelectedTiles();
 				board.repaint();
@@ -180,7 +180,7 @@ public class Player
 		}
 		else if (selectedTiles.size() <= 1)
 		{
-			System.out.println("NOT ENOUGH TILES SELECTED, U FUCKIING COCKHOLE");
+			System.out.println("Not enough tiles selected");
 
 			// CONDITION only one or less tiles selected
 			selectedTiles.clear();
@@ -188,7 +188,7 @@ public class Player
 		}
 		else
 		{
-			System.out.println("U SELECTED TOO MANY TILES!! WTF DO U THINK THIS IS, A QUADRUPLE QUINTUPLEFUCK?");
+			System.out.println("Too many tiles selected");
 			// CONDITION too many tiles selected (double jump (3 tiles) is the max)
 			selectedTiles.clear();
 			board.repaint();
@@ -214,7 +214,7 @@ public class Player
 		if ((direction == -1 && endTile.getLocation().y == 0) || (direction == 1 && endTile.getLocation().y == board.numTiles - 1))
 		{
 			endTile.kingPiece();
-			System.out.println("FUCKING KING ME");
+			System.out.println("King Me!");
 		}
 	}
 }

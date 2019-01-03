@@ -319,7 +319,7 @@ public class Board extends JPanel implements MouseListener, KeyListener
 	public void keyReleased(KeyEvent arg0) { }
 	
 	@Override
-	public void keyTyped(KeyEvent e) { }
+	public void keyTyped(KeyEvent arg0) { }
 	
 	@Override
 	public void mouseEntered(MouseEvent arg0) { }
